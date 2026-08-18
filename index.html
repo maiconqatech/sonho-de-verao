@@ -6,12 +6,15 @@
 <title>Sonho de Verão | Casa para alugar em Peruíbe</title>
 <meta name="description" content="Casa Sonho de Verão em Peruíbe: piscina, churrasqueira, quintal privado, a 1,5km da praia. Reserve pelo WhatsApp.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏖️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
     --azul-profundo:#0b3d5c;
     --azul-piscina:#1a9cb0;
-    --areia:#f7ecd9;
-    --areia-clara:#fffaf0;
+    --azul-claro:#dcedf2;
+    --azul-claro2:#eef7fa;
     --coral:#ff7a59;
     --coral-escuro:#e8613f;
     --verde-whats:#25d366;
@@ -20,15 +23,18 @@
     --branco:#ffffff;
     --sombra: 0 10px 30px rgba(11,61,92,0.12);
     --radius: 18px;
+    --fonte-titulo:'Fraunces', Georgia, serif;
+    --fonte-texto:'Inter', -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth;}
   body{
-    font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+    font-family:var(--fonte-texto);
     color:var(--texto);
-    background:var(--areia-clara);
+    background:var(--azul-claro2);
     overflow-x:hidden;
   }
+  h1, h2, h3, .logo-text{font-family:var(--fonte-titulo);}
   img{max-width:100%; display:block;}
   a{text-decoration:none; color:inherit;}
   .container{max-width:1120px; margin:0 auto; padding:0 24px;}
@@ -36,7 +42,7 @@
   /* ===== HEADER ===== */
   header{
     position:sticky; top:0; z-index:50;
-    background:rgba(255,250,240,0.92);
+    background:rgba(238,247,250,0.92);
     backdrop-filter:blur(8px);
     border-bottom:1px solid rgba(11,61,92,0.08);
   }
@@ -45,11 +51,14 @@
     padding:16px 24px; max-width:1120px; margin:0 auto;
   }
   .logo{
-    font-size:1.25rem; font-weight:800; color:var(--azul-profundo);
-    letter-spacing:.3px;
-    display:flex; align-items:center; gap:8px;
+    display:flex; align-items:center; gap:10px;
   }
-  .logo span{color:var(--coral);}
+  .logo-icon{width:32px; height:32px; flex-shrink:0;}
+  .logo-text{
+    font-size:1.25rem; font-weight:700; color:var(--azul-profundo);
+    letter-spacing:.2px;
+  }
+  .logo-text span{color:var(--coral);}
   .nav-cta{
     display:flex; align-items:center; gap:10px;
     background:var(--verde-whats); color:#fff;
@@ -163,7 +172,7 @@
   }
 
   /* ===== DESTAQUES ===== */
-  .destaques{background:var(--areia);}
+  .destaques{background:var(--azul-claro);}
   .destaques-grid{
     display:grid; grid-template-columns:repeat(4, 1fr); gap:24px;
   }
@@ -244,7 +253,7 @@
   .local-card .sub{font-size:.8rem; color:rgba(255,255,255,.6); margin-top:4px;}
 
   /* ===== COMODIDADES ===== */
-  .comodidades{background:var(--areia);}
+  .comodidades{background:var(--azul-claro);}
   .comodidades-grid{
     display:grid; grid-template-columns:repeat(3, 1fr); gap:16px;
   }
@@ -262,7 +271,7 @@
     display:grid; grid-template-columns:repeat(2, 1fr); gap:24px;
   }
   .avaliacao-card{
-    background:var(--areia); border-radius:var(--radius);
+    background:var(--azul-claro); border-radius:var(--radius);
     padding:30px; position:relative;
   }
   .estrelas{color:#ffb400; font-size:1.1rem; margin-bottom:12px; letter-spacing:2px;}
@@ -286,7 +295,7 @@
   }
 
   /* ===== HOST ===== */
-  .anfitriao{background:var(--areia);}
+  .anfitriao{background:var(--azul-claro);}
   .anfitriao-card{
     background:var(--branco); border-radius:var(--radius);
     padding:44px; box-shadow:var(--sombra);
@@ -304,7 +313,7 @@
   .anfitriao-info p{color:var(--texto-claro); margin-bottom:14px;}
   .anfitriao-badges{display:flex; gap:10px; flex-wrap:wrap;}
   .anfitriao-badges span{
-    background:var(--areia); color:var(--azul-profundo);
+    background:var(--azul-claro); color:var(--azul-profundo);
     padding:6px 14px; border-radius:999px; font-size:.82rem; font-weight:600;
   }
 
@@ -381,7 +390,14 @@
 
 <header>
   <div class="nav">
-    <div class="logo">🌊 Sonho de <span>Verão</span></div>
+    <div class="logo">
+      <svg class="logo-icon" viewBox="0 0 44 44">
+        <circle cx="22" cy="17" r="8" fill="#ffb400"/>
+        <path d="M4 26c2-2.5 5-2.5 7 0s5 2.5 7 0 5-2.5 7 0 5 2.5 7 0" fill="none" stroke="#1a9cb0" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M4 33c2-2.5 5-2.5 7 0s5 2.5 7 0 5-2.5 7 0 5 2.5 7 0" fill="none" stroke="#0b3d5c" stroke-width="2.4" stroke-linecap="round" opacity=".5"/>
+      </svg>
+      <div class="logo-text">Sonho de <span>Verão</span></div>
+    </div>
     <a class="nav-cta" href="https://wa.me/5515997341422?text=Ol%C3%A1!%20Vi%20a%20casa%20Sonho%20de%20Ver%C3%A3o%20em%20Peru%C3%ADbe%20e%20quero%20saber%20mais%20sobre%20disponibilidade." target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.004 2C6.486 2 2.01 6.477 2.01 11.996c0 1.99.518 3.876 1.5 5.55L2 22l4.582-1.478a9.94 9.94 0 0 0 5.422 1.55C17.523 22.072 22 17.596 22 12.077 22 6.559 17.523 2.083 12.004 2Zm0 18.06a8.01 8.01 0 0 1-4.335-1.276l-.31-.185-3.156.912.916-3.075-.203-.318A8.02 8.02 0 1 1 20.02 12.06a8.03 8.03 0 0 1-8.017 8.001Z"/></svg>
       WhatsApp
