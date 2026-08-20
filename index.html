@@ -67,7 +67,8 @@
     { "@type": "LocationFeatureSpecification", "name": "Piscina", "value": true },
     { "@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true },
     { "@type": "LocationFeatureSpecification", "name": "Churrasqueira", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Estacionamento gratuito", "value": true }
+    { "@type": "LocationFeatureSpecification", "name": "Estacionamento gratuito", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Aceita pets", "value": false }
   ]
 }
 </script>
@@ -190,6 +191,16 @@
   .hero-stats div{min-width:110px;}
   .hero-stats strong{display:block; font-size:1.6rem; font-weight:800;}
   .hero-stats span{font-size:.85rem; color:rgba(255,255,255,.8);}
+
+  /* ===== AVISO PET ===== */
+  .aviso-pet{
+    background:var(--coral-escuro); color:#fff;
+    text-align:center; padding:16px 24px;
+    display:flex; align-items:center; justify-content:center; gap:10px;
+    flex-wrap:wrap;
+  }
+  .aviso-pet .ico{font-size:1.3rem;}
+  .aviso-pet strong{font-size:1.05rem; font-weight:800; letter-spacing:.2px;}
 
   /* ===== SECTION HEADINGS ===== */
   .section{padding:90px 0;}
@@ -326,6 +337,8 @@
   }
   .comodidade-item .ico{font-size:1.4rem;}
   .comodidade-item span{font-weight:600; font-size:.98rem; color:var(--texto);}
+  .comodidade-item.nao{background:#fdeceb; box-shadow:none; border:1px solid rgba(232,97,63,.25);}
+  .comodidade-item.nao span{color:var(--coral-escuro);}
 
   /* ===== AVALIACOES ===== */
   .avaliacoes{background:var(--branco);}
@@ -489,6 +502,11 @@
   </div>
 </section>
 
+<div class="aviso-pet">
+  <span class="ico">🚫🐾</span>
+  <strong>Não aceitamos pets</strong>
+</div>
+
 <section class="galeria section" id="galeria">
   <div class="container">
     <div class="section-head">
@@ -621,6 +639,7 @@
       <div class="comodidade-item"><span class="ico">🚿</span><span>Chuveiro externo</span></div>
       <div class="comodidade-item"><span class="ico">📷</span><span>Câmeras de segurança externas</span></div>
       <div class="comodidade-item"><span class="ico">🏠</span><span>Casa térrea (sem escadas)</span></div>
+      <div class="comodidade-item nao"><span class="ico">🚫</span><span>Não aceitamos pets</span></div>
     </div>
   </div>
 </section>
